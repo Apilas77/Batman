@@ -1,0 +1,104 @@
+/*reset*/
+/* 16 * 62.5 = 1.000 */
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem sans-serif;
+    margin: 0;
+}
+h1,h2,h3,h4,figure,p,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 100;
+}
+details,summary,a{
+    outline: none;
+    text-decoration: none;
+    color: #222;
+}
+address{
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    /*mes variables css*/
+    --color-default: #222;
+    --color-list: #ccc;
+    --color-page: #fafafa;
+}
+/*theme*/
+header{
+    background-color: var(--color-default);
+}
+header h1{
+    color: var(--color-page);
+    line-height: 6.5rem;
+    text-align: center;
+}
+figure{
+    max-width: 70rem;/*700px*/
+    margin: 5.0rem auto 0;
+    box-shadow: 0 0 1.0rem var(--color-default);
+    border: solid 0.1rem transparent;
+
+}
+figure img{
+    display: block;
+    width: 100%;
+}
+figure figcaption{
+    padding: 1.0rem;
+}
+figure figcaption h2{
+    line-height: 6.5rem;
+}
+figcaption ul li{
+    line-height: 2.5rem;
+    padding:0.5rem;
+}
+figcaption ul li:nth-child(2n+2){
+    background-color: var(--color-list);
+}
+figure details{
+    
+    background-color: var(--color-list);
+}
+figure details p{
+    padding: 0.5rem;
+}
+summary::-webkit-details-marker{
+    display: none;
+}
+summary{
+    list-style: none;
+}
+summary::before{
+    content: "+";
+    color: var(--color-default);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    /* font-family: "Font Awesome 5 solid"; */
+}
+details[open] summary::before{
+    content:"-";
+}
+div:nth-of-type(1){
+    padding: 1.0rem;
+}
+div:nth-of-type(1) p{
+    text-align: center;
+}
+@media screen and (max-width:60rem){
+    figure{
+        margin-top:0;
+        border: 0;
+    }
+    figure figcaption h2, header h1{
+        font-size: 4.5vw;
+    }
+}
